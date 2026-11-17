@@ -2,130 +2,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NOIR BAR | Cocktails & Nightlife</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      background: #101010;
-      color: #f5f0e8;
-      font-family: Arial, sans-serif;
-    }
-
-    header {
-      padding: 28px 20px;
-      text-align: center;
-      border-bottom: 1px solid #927447;
-    }
-
-    header h1 {
-      color: #c9a66b;
-      letter-spacing: 8px;
-      font-size: 32px;
-    }
-
-    .hero {
-      min-height: 75vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 30px 20px;
-      background: linear-gradient(#0008, #000b);
-    }
-
-    .hero h2 {
-      font-size: clamp(38px, 9vw, 72px);
-      color: #d4b477;
-      letter-spacing: 4px;
-    }
-
-    .hero p {
-      margin-top: 20px;
-      font-size: 16px;
-      letter-spacing: 3px;
-    }
-
-    .button {
-      display: inline-block;
-      margin-top: 35px;
-      padding: 16px 30px;
-      border: 1px solid #c9a66b;
-      color: #c9a66b;
-      text-decoration: none;
-      letter-spacing: 2px;
-    }
-
-    section {
-      padding: 65px 22px;
-      text-align: center;
-    }
-
-    section h2 {
-      color: #c9a66b;
-      margin-bottom: 25px;
-      letter-spacing: 3px;
-    }
-
-    section p {
-      line-height: 1.8;
-      color: #c5c0b8;
-      max-width: 600px;
-      margin: auto;
-    }
-
-    footer {
-      padding: 30px;
-      text-align: center;
-      color: #c9a66b;
-      border-top: 1px solid #59472e;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NOIR BAR | Your Night. Your Rules.</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:#0b0b0b;color:#f5f0e8;font-family:Georgia,serif}
+a{color:inherit;text-decoration:none}
+header{height:76px;padding:0 7%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #29241b}
+.logo{font-size:27px;letter-spacing:7px;color:#d2ae70}
+nav{display:flex;gap:28px;font-family:Arial,sans-serif;font-size:11px;letter-spacing:2px}
+nav a:hover{color:#d2ae70}
+.hero{min-height:620px;display:flex;align-items:center;justify-content:center;text-align:center;padding:70px 20px;background:linear-gradient(#0008,#0009),url('IMG_0571.jpeg') center/cover}
+.hero-content{max-width:750px}
+.eyebrow{font:11px Arial,sans-serif;letter-spacing:5px;color:#d2ae70;margin-bottom:25px}
+h1{font-size:clamp(48px,10vw,100px);font-weight:normal;letter-spacing:9px}
+.hero p{font:13px Arial,sans-serif;letter-spacing:5px;margin:22px 0 35px}
+.btn{display:inline-block;padding:16px 32px;border:1px solid #c6a36a;color:#e3c38b;font:11px Arial,sans-serif;letter-spacing:3px;transition:.3s}
+.btn:hover{background:#c6a36a;color:#111}
+section{padding:90px 7%}
+.section-heading{text-align:center;margin-bottom:48px}
+.section-heading h2{font-size:clamp(29px,5vw,43px);font-weight:normal;letter-spacing:4px}
+.section-heading p{font:11px Arial,sans-serif;letter-spacing:3px;color:#c6a36a;margin-top:14px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+.about img{width:100%;height:420px;object-fit:cover}
+.about h2{font-size:38px;font-weight:normal;letter-spacing:3px;margin-bottom:25px}
+.about p,.experience p{font:14px/2 Arial,sans-serif;color:#b9b5ae}
+.menu{background:#111}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}
+.card{background:#181818;text-align:center;padding-bottom:30px}
+.card img{width:100%;height:300px;object-fit:cover;display:block}
+.card h3{font-size:19px;font-weight:normal;letter-spacing:2px;margin:25px 10px 10px}
+.card p{font:11px Arial,sans-serif;color:#c6a36a;letter-spacing:2px}
+.experience{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+.experience img{width:100%;height:420px;object-fit:cover}
+.experience h2{font-size:38px;font-weight:normal;letter-spacing:3px;margin-bottom:25px}
+.gallery{background:#111}
+.gallery-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:15px}
+.gallery-grid img{width:100%;height:280px;object-fit:cover}
+.contact{text-align:center}
+.contact h2{font-size:38px;font-weight:normal;letter-spacing:5px;margin-bottom:20px}
+.contact p{font:12px Arial,sans-serif;letter-spacing:2px;color:#c6a36a;margin-bottom:30px}
+footer{border-top:1px solid #29241b;padding:30px;text-align:center;color:#9c927f;font:10px Arial,sans-serif;letter-spacing:3px}
+@media(max-width:700px){
+header{padding:0 5%;height:auto;min-height:75px;flex-wrap:wrap;gap:12px;padding-top:15px;padding-bottom:15px}
+.logo{font-size:22px}
+nav{gap:13px;font-size:9px}
+.hero{min-height:510px}
+section{padding:65px 6%}
+.about,.experience{grid-template-columns:1fr;gap:30px}
+.about img,.experience img{height:310px}
+.cards{grid-template-columns:1fr}
+.card img{height:340px}
+.gallery-grid{grid-template-columns:1fr 1fr}
+.gallery-grid img{height:190px}
+}
+</style>
 </head>
 <body>
 
 <header>
-  <h1>NOIR BAR</h1>
+<div class="logo">NOIR BAR</div>
+<nav>
+<a href="#about">ABOUT</a>
+<a href="#cocktails">MENU</a>
+<a href="#experience">EXPERIENCE</a>
+</nav>
 </header>
 
+<main>
 <div class="hero">
-  <h2>YOUR NIGHT.<br>YOUR RULES.</h2>
-  <p>COCKTAILS · MUSIC · NIGHT</p>
-  <a href="#menu" class="button">DISCOVER OUR MENU</a>
+<div class="hero-content">
+<div class="eyebrow">WELCOME TO NOIR</div>
+<h1>NOIR BAR</h1>
+<p>YOUR NIGHT. YOUR RULES.</p>
+<a class="btn" href="#cocktails">DISCOVER OUR MENU</a>
+</div>
 </div>
 
-<section>
-  <h2>ABOUT NOIR</h2>
-  <p>
-    A place to unwind, enjoy signature cocktails
-    and spend unforgettable nights with friends.
-  </p>
+<section id="about" class="about">
+<div>
+<div class="eyebrow">THE ART OF NIGHT</div>
+<h2>ABOUT NOIR</h2>
+<p>A place to unwind, enjoy signature cocktails and spend unforgettable nights with friends. Discover a world of refined taste, elegant atmosphere and unforgettable moments.</p>
+</div>
+<img src="IMG_0571.jpeg" alt="NOIR BAR interior">
 </section>
 
-<section id="menu">
-  <h2>SIGNATURE COCKTAILS</h2>
-  <p>
-    Classic Cocktails · Signature Mixes · Premium Mixes
-  </p>
+<section id="cocktails" class="menu">
+<div class="section-heading">
+<h2>SIGNATURE COCKTAILS</h2>
+<p>CRAFTED WITH PASSION. SERVED WITH STYLE.</p>
+</div>
+<div class="cards">
+<div class="card">
+<img src="IMG_0568.jpeg" alt="Classic cocktails">
+<h3>CLASSIC COCKTAILS</h3>
+<p>TIMELESS ELEGANCE</p>
+</div>
+<div class="card">
+<img src="IMG_0569.jpeg" alt="Signature drinks">
+<h3>SIGNATURE DRINKS</h3>
+<p>UNIQUE CREATIONS</p>
+</div>
+<div class="card">
+<img src="IMG_0570.jpeg" alt="Premium mixes">
+<h3>PREMIUM MIXES</h3>
+<p>EXCEPTIONAL TASTE</p>
+</div>
+</div>
 </section>
 
-<section>
-  <h2>THE NOIR EXPERIENCE</h2>
-  <p>
-    Unique drinks, dark atmosphere and good company.
-    Welcome to NOIR BAR.
-  </p>
+<section id="experience" class="experience">
+<img src="IMG_0567.jpeg" alt="Bartender preparing cocktails">
+<div>
+<div class="eyebrow">BEHIND THE BAR</div>
+<h2>THE NOIR EXPERIENCE</h2>
+<p>Every cocktail tells a story. Every detail matters. Our passion for mixology, atmosphere and hospitality makes every visit a night to remember.</p>
+</div>
 </section>
+
+<section class="gallery">
+<div class="section-heading">
+<h2>THE ART OF MIXOLOGY</h2>
+<p>MORE THAN JUST A DRINK</p>
+</div>
+<div class="gallery-grid">
+<img src="IMG_0572.jpeg" alt="Three elegant cocktails">
+<img src="IMG_0569.jpeg" alt="Signature cocktail">
+<img src="IMG_0570.jpeg" alt="Premium cocktail">
+</div>
+</section>
+
+<section class="contact">
+<div class="eyebrow">YOUR NIGHT STARTS HERE</div>
+<h2>BOOK YOUR NIGHT</h2>
+<p>GOOD DRINKS. GREAT COMPANY. UNFORGETTABLE NIGHTS.</p>
+<a class="btn" href="#cocktails">EXPLORE THE MENU</a>
+</section>
+</main>
 
 <footer>
-  NOIR BAR · THE ART OF NIGHT
+NOIR BAR · THE ART OF NIGHT
 </footer>
 
 </body>
